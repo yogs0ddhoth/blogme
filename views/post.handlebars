@@ -1,0 +1,25 @@
+<div class="text-center">
+  <div class="card">
+    <h2 class="card-header">{{name}}</h2>
+    <p class="card-body">{{description}}</p>
+    <p class="card-footer"> - {{user.name}}, {{format_date date_created}}</p>
+  </div>
+
+  {{#each comments as |comment|}}
+  {{> comment-details}}
+  {{/each}}
+
+  {{#if logged_in}}
+  <form class="form comment-form" >
+    <div class="form-group">
+      <label for="comment-input">Comment:</label>
+      <input class="form-input" type="comment" id="comment-input" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+  {{/if}}
+</div>
+
+<script src="../js/comment.js"></script>
