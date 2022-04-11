@@ -28,14 +28,16 @@
     <h3>Posts:</h3>
 
     {{#each posts as |post|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+    {{!-- <div class="col-mb-2 card"> --}}
+      <div class="col-md-8 card-2">
+        <h4 class="card-header"><a href="/post/{{post.id}}" class="card-link">{{post.name}}</a></h4>
+        <p class="card-body">{{post.description}}</p>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+        </div>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-      </div>
-    </div>
+      
+    {{!-- </div> --}}
     {{/each}}
   </div>
   {{/if}}
