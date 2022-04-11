@@ -429,6 +429,16 @@ a:hover {
   text-decoration: underline;
 }
 
+a .card-link {
+  color: #d9e9e8;
+  text-decoration: none;
+}
+
+a .card-header:hover {
+  color: #1b89bc;
+  text-decoration: underline;
+}
+
 /* HEIGHT / WIDTH UTILS */
 .w-100 {
   width: 100%;
