@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// Route to render homepage
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
@@ -27,27 +28,23 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Route to a render a single post and its associated comments
 router.get('/post/:id', async (req, res) => {
-  console.log('here');
+  // Get a single post and JOIN with user and comment data
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
         User,
-        // {
-        //   model: User,
-        //   attributes: ['name'],
-        // },
         {
           model: Comment,
-          // include: [User]
-        // //   where: {project_id: req.params.id}
           attributes: ['comment', 'author', 'date_created'],
         }
       ],
     });
 
     const post = postData.get({ plain: true });
-    console.log(post);
+    
+    // Pass serialized data and session flag into template
     res.render('post', {
       ...post,
       logged_in: req.session.logged_in

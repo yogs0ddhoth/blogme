@@ -41,6 +41,7 @@ router.post('/:id', withAuth, async (req, res) => {
   }
 });
 
+// todo: add elements and script to edit comments on the front end
 router.put('/:id', async (req, res) => {
   try {
     const update = await Comment.update(
@@ -59,8 +60,10 @@ router.put('/:id', async (req, res) => {
   }
 })
 
+// delete operation
 router.delete('/:id', withAuth, async (req, res) => {
   try {
+    // delete post
     const postData = await Post.destroy({
       where: {
         id: req.params.id,
