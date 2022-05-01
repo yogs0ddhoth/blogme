@@ -1,8 +1,8 @@
 <div class="text-center">
   <div class="card">
     <h2 class="card-header">{{name}}</h2>
-    <p class="card-body">{{description}}</p>
-    <p class="card-footer"> - {{user.name}}, {{format_date date_created}}</p>
+    <p class="card-body pre-line">{{description}}</p>
+    <p class="card-footer author"> - {{user.name}}, {{format_date date_created}}</p>
   </div>
 
   {{#each comments as |comment|}}

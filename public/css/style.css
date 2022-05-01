@@ -16,3 +16,11 @@ header, .post:not(:last-child) {
   color: #065b83;
   text-decoration: underline;
 }
+
+.pre-line {
+  white-space: pre-line;
+}
+
+.author {
+  font-size: 0.85rem;
+}
