@@ -4,6 +4,7 @@ const withAuth = require('../../utils/auth');
 
 // create a post
 router.post('/', withAuth, async (req, res) => {
+  // console.log(req.body);
   try {
     const newPost = await Post.create({
       ...req.body,
@@ -51,7 +52,7 @@ router.put('/:id', async (req, res) => {
     // const update = await Comment.findByPk(req.params.id);
     // update.comment = req.body.comment;
     
-    // await update.save();
+    await update.save();
 
     const updatedComment = await Comment.findByPk(req.params.id);
     res.status(200).json(updatedComment);
