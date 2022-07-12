@@ -1,6 +1,6 @@
 {
-  "name": "tech-blogme",
-  "version": "1.0.0",
+  "name": "blogme",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yogs0ddhoth/tech-blogme.git"
+    "url": "git+https://github.com/yogs0ddhoth/blogme.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yogs0ddhoth/tech-blogme/issues"
+    "url": "https://github.com/yogs0ddhoth/blogme/issues"
   },
-  "homepage": "https://github.com/yogs0ddhoth/tech-blogme#readme",
+  "homepage": "https://github.com/yogs0ddhoth/blogme#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
