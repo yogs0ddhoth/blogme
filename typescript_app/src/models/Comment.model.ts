@@ -17,7 +17,7 @@ export default class Comment extends Model<Comment> {
   post_id!: number;
   
   @BelongsTo(() => Post)
-  post!: Post
+  post!: Post 
 
   @PrimaryKey
   @AutoIncrement
