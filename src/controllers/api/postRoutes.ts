@@ -1,6 +1,6 @@
 const router = require('express').Router();
 import { Request, Response } from 'express';
-import withAuth from '../../utils/auth';
+import { withAuth } from '../../utils/auth';
 import models from '../../models';
 
 // create a post
