@@ -2,10 +2,11 @@
   "name": "blogme",
   "version": "2.0.0",
   "description": "",
-  "main": "./build/server.js",
+  "main": "./src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/server.js",
+    "start": "node dist/server.js",
+    "postinstall": "tsc",
     "dev": "nodemon src/server.ts"
   },
   "repository": {

@@ -1,5 +1,3 @@
-// import { Sequelize } from 'sequelize';
-import { join } from 'path';
 import { Sequelize } from 'sequelize-typescript';
 import { HOST, USER, PASSWORD, DB } from './db.config'; 
 
@@ -16,7 +14,6 @@ if (process.env.JAWSDB_URL) {
       host: HOST,
       dialect: 'mysql',
       port: 3306,
-      // models: [__dirname + '/**/*.model.ts']
     }
   );
 }
