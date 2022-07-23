@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/server.js",
-    "postinstall": "tsc",
+    "mkdir:css": "cd dist/public && mkdir css",
+    "copy:css": "cp -r src/public/css/* dist/public/css",
+    "build:css": "npm run mkdir:css && npm run copy:css",
+    "postinstall": "tsc && npm run build:css",
     "dev": "nodemon src/server.ts"
   },
   "repository": {
