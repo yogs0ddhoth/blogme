@@ -17,7 +17,7 @@ const hbs = create({ helpers }); // THIS MAY NOT WORK
 const sessionConfig: session.SessionOptions = {
   secret: 'Super secret secret',
   cookie: {
-    maxAge: 180000,
+    maxAge: 1800000,
   },
   resave: false,
   saveUninitialized: true,
