@@ -54,7 +54,6 @@
     "@types/validator": "^13.7.4",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
-    "handlebars-loader": "^1.7.2",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.15",
     "sass": "^1.54.0",

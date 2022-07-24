@@ -9,13 +9,6 @@ module.exports = {
   entry: './src/server.ts',
   module: {
     rules: [
-      // {
-      //   test:/\.handlebars$/,
-      //   loader: 'handlebars-loader',
-      //   query: {
-      //     partialDirs
-      //   }
-      // },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -48,8 +41,8 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    fallback: {
-      fs: false
-    }
+    // fallback: {
+    //   fs: false
+    // }
   }
 }
